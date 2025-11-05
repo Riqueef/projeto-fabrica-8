@@ -1,0 +1,167 @@
+/* ==============================
+   Vida & Cuidado - Estilo Global
+   ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --cor-principal: #007bff;
+    --cor-secundaria: #00bcd4;
+    --cor-fundo: #f4f8fb;
+    --cor-texto: #333;
+    --cor-branca: #fff;
+    --cor-cinza: #777;
+    --borda-radius: 12px;
+    --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* ======= Container Principal ======= */
+.container {
+    background-color: var(--cor-branca);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-card);
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= Títulos ======= */
+h1 {
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--cor-cinza);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ======= Listas ======= */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e8f2ff;
+    border-radius: var(--borda-radius);
+    margin: 10px 0;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: var(--cor-principal);
+    transform: translateY(-3px);
+}
+
+ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+ul li:hover a {
+    color: var(--cor-branca);
+}
+
+/* ======= Imagens ======= */
+img {
+    border-radius: 15%;
+    margin: 15px 0;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* ======= Botões ======= */
+.home-button {
+    margin: 15px 0;
+}
+
+button {
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: var(--cor-branca);
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.2s ease, opacity 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--cor-branca);
+}
+
+/* ======= Links gerais ======= */
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ======= Responsividade ======= */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    img {
+        width: 120px;
+    }
+}
