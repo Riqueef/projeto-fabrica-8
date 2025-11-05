@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Médico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Médico</h1>
+        <img src="{{ medico.image }}" alt="{{ medico.nome }}" width="150">
+        <p><strong>Nome:</strong> {{ medico.nome }}</p>
+        <p><strong>Especialidade:</strong> {{ medico.especialidade }}</p>
+        <p><strong>Anos de Experiência:</strong> {{ medico.anos_experiencia }}</p>
+        
+        <a href="{{ url_for('listar_medicos') }}">Voltar à lista de médicos</a>
+    </div>
+</body>
+</html>

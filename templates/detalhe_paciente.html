@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Paciente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Paciente</h1>
+        <img src="{{ paciente.image }}" alt="{{ paciente.nome }}" width="150">
+        <p><strong>Nome:</strong> {{ paciente.nome }}</p>
+        <p><strong>Idade:</strong> {{ paciente.idade }}</p>
+        <p><strong>Condicao:</strong> {{ paciente.condicao }}</p>
+        <a href="{{ url_for('listar_pacientes') }}">Voltar à lista de pacientes</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Vida & Cuidado - Sistema de Gestão de Médicos & Pacientes 🏥</h1>
+        <h2>O Vida & Cuidado é um sistema que facilita a gestão de médicos e pacientes, organizando agendamentos, prontuários, tratamentos e exames. Ele melhora a comunicação e a eficiência no atendimento médico, permitindo mais agilidade e segurança nos cuidados com os pacientes.</h2>
+        <p>Lista de Pacientes:</p>
+        <div class="home-button">
+            <button>
+                <a href="{{ url_for('listar_pacientes') }}">Listar Pacientes</a>
+            </button>
+        </div>
+        <p>Lista de Médicos:</p>
+        <div class="home-button">
+            <button>
+                <a href="{{ url_for('listar_medicos') }}">Listar Médicos</a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
